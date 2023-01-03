@@ -1,0 +1,14 @@
+<!--Interpolation biding below-->
+<h2>{{ hero.name | uppercase }} Details</h2>
+<div><span>id: </span>{{ hero.id}}</div>
+<div><span>name: </span>{{ hero.name }}</div>
+
+<div>
+  <label for="name">Hero name:</label>
+  <!--2 way dataBind below: [(ngModel)] alteraçoes no component vão relfetir no template e vice-versa-->
+  <!--Podemos editar o nome hero.name que e o atributo da propriedade(heroes.component.Ts) e veremos a alteração no Detail acima, e abaixo onde tem name-->
+  <!--Para fazer a ligação do ngModel temos que importar o modulo pra nossa aplicaçã/ele e proprio do angular(forms model) feito em app.module.ts(verificar)-->
+  <!--Em em app.module.ts inserimos o formsmodule em @ngModule no imports e acima inserimos o import do formsModule-->
+  <!--Agora posso usar o ngModule em qualquer local na aplicação, batou importar uma vez-->
+  <input type="name" [(ngModel)]="hero.name" placeholder="name" type=""text>
+</div>
